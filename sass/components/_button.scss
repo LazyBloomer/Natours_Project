@@ -33,6 +33,15 @@
       background-color: $color-white;
     }
   }
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    /* active state is when button is clicked */
+    &::after {
+      background-color: $color-primary;
+    }
+  }
   &::after {
     display: inline-block;
     content: "";
