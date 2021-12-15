@@ -1,4 +1,5 @@
 .btn {
+  &, // this is for button element not link
   &:link,
   &:visited {
     position: relative;
@@ -9,6 +10,9 @@
     border-radius: 10rem;
     transition: all 0.4s;
     font-size: $default-font-size;
+    // change for the <button> element
+    border: none;
+    cursor: pointer;
   }
   /* here button is a inline-block element hence to center it we can use text-align center as it will be treated as a text define text-align in parents property */
 
@@ -20,7 +24,8 @@
       opacity: 0;
     }
   }
-  &:active {
+  &:active,
+  &:focus {
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
